@@ -16,14 +16,23 @@ public class UserDao {
 	public JdbcTemplate jdbcTemplate;
 
 	public List<User> getUsers() {
-		return jdbcTemplate.query("SELECT * FROM USERS", new RowMapper<User>() {
+		return jdbcTemplate.query("SELECT * FROM USERS ORDER BY name DESC", new RowMapper<User>() {
 			@Override
 			public User mapRow(ResultSet resultSet, int i) throws SQLException {
 				User user = new User();
-				user.name = resultSet.getString("NAME");
-				user.age = resultSet.getInt("AGE");
-				return user;
+				user.name = resultSet.getString("name");
+                user.email = resultSet.getString("email");
+                user.password = resultSet.getString("password");
+                return user;
 			}
 		});
 	}
+
+	public void createUserTable() {
+        jdbcTemplate.execute("CREATE TABLE SYSTEM.USERS (name VARCHAR(10), password VARCHAR(10), email VARCHAR(20))");
+    }
+
+    public void createUser(String name, String password, String email) {
+        jdbcTemplate.update("INSERT INTO USERS (name, password, email) VALUES (?,?,?)", name, password, email);
+    }
 }

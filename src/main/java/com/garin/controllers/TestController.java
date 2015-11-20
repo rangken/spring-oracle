@@ -14,10 +14,11 @@ public class TestController {
 	@Autowired
 	UserDao userDao;
 
-	@RequestMapping("/welcome")
+	@RequestMapping("/test")
 	public String welcome(Model model) {
-		List<User> users = userDao.getUsers();
-		model.addAttribute("name", "garin");
-		return "welcome";
+//		List<User> users = userDao.getUsers();
+//		model.addAttribute("name", "garin");
+//		userDao.createUserTable();
+		return "test";
 	}
 }

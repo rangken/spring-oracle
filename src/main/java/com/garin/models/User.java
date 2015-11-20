@@ -2,13 +2,18 @@ package com.garin.models;
 
 public class User {
 	public String name;
-	public Integer age;
+	public String email;
+	public String password;
 
 	public String getName() {
 		return name;
 	}
 
-	public Integer getAge() {
-		return age;
+	public String getEmail() {
+		return email;
+	}
+
+	public String getPassword() {
+		return password;
 	}
 }
