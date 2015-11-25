@@ -1,0 +1,16 @@
+#select_time {
+	margin-top: 0px;
+	margin-left: 400px;
+	padding-top: 0.6px;
+}
+
+button.ok_bnt {
+	width:60px;
+	height: 30px;
+	color:white;
+	border: 1px solid  #5064FA;
+	border-radius: 10px;
+	background-color: #5064FA;
+	font-size: 16px;
+	margin-left: 30px;
+}

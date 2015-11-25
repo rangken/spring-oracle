@@ -30,7 +30,7 @@ public class UserController {
 	@RequestMapping(value="/create", method = RequestMethod.POST)
 	public String createUser(@RequestParam Map<String,String> params, Model model){
 		userDao.createUser(params.get("name"), params.get("password"), params.get("email"));
-		model.addAttribute("title", "가린이의 영화 홈페이지");
+		model.addAttribute("title", "회원가입 완료");
 		model.addAttribute("users", userDao.getUsers());
 		return "users/index";
 	}

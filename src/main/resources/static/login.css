@@ -1,0 +1,73 @@
+header  {
+	background-color: #ffffff;
+	color: #5064FA;
+	text-align: center;
+	font-size: 15px;
+	height: 50px;
+	font-weight: bold;
+}
+
+nav.nav-bar {
+	background-color: #F8F8F8;
+	color: #5064FA;
+	height: 40px;
+}
+
+nav ul{
+	list-style: none;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px
+}
+nav ul li{
+	display: inline;
+	padding: 5px 30px;
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color: #5064FA;
+	font-size: 20px;
+}
+section.content {
+	width: 900px;
+	height: 500px;
+	border: 3px solid  #5064FA;
+	border-radius: 20px;
+	background-color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 24px;
+}
+
+button.reserve_bnt {
+	width:60px;
+	height: 30px;
+	color:white;
+	border: 1px solid  #5064FA;
+	border-radius: 10px;
+	background-color: #5064FA;
+	font-size: 16px;
+	margin-left: 130px;
+}
+
+
+form {
+	margin-top: 50px;
+	margin-left: 300px;
+	padding-top: 0.6px;
+}
+#select_movie {
+	margin-top: 50px;
+	margin-left: 300px;
+	padding-top: 0.6px;
+
+}
