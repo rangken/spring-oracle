@@ -34,4 +34,9 @@ public class UserController {
 		model.addAttribute("users", userDao.getUsers());
 		return "users/index";
 	}
+
+	@RequestMapping("/home")
+	public String mainhome(@RequestParam Map<String,String> params, Model model) {
+		return "users/home";
+	}
 }

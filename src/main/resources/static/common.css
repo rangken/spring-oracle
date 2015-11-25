@@ -1,7 +1,18 @@
 
 @font-face {
-    font-family:"나눔고딕";
-    src: url('../fonts/NotoSansCJKkr-Medium.otf')format("truetype");
-    font-style: normal;
+
+    font-family:'NanumGothic';
+
+    src: url('/fonts/NanumGothic.eot');
+
+    src: url('/fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),
+
+         url('/fonts/NanumGothic.woff') format('woff'),
+
+         url('/fonts/NanumGothic.ttf') format('truetype');
+
     font-weight: normal;
+
+    font-style: normal;
+
 }

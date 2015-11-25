@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
-
+<head>
+	<style>
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	body{font-family: 'Nanum Gothic', sans-serif;}
+	</style>
+</head>
 <body>
 <table>
     <h2> ${title} </h2>
