@@ -9,11 +9,12 @@
 <body>
 <table>
     <h2> ${title} </h2>
-	<c:forEach items="${users}" var="user">
+	<c:forEach items="${reserves}" var="reserve">
 		<tr>
-			<td><c:out value="${user.getName()}" /></td>
-			<td><c:out value="${user.getEmail()}" /></td>
-			<td><c:out value="${user.getPassword()}" /></td>
+			<td><c:out value="${reserve.getTitle()}" /></td>
+			<td><c:out value="${reserve.getDate()}" /></td>
+			<td><c:out value="${reserve.getTime()}" /></td>
+			<td><c:out value="${reserve.getTheater()}" /></td>
 		</tr>
 	</c:forEach>
 </table>

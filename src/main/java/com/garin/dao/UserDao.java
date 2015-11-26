@@ -21,9 +21,9 @@ public class UserDao {
 			public User mapRow(ResultSet resultSet, int i) throws SQLException {
 				User user = new User();
 				user.name = resultSet.getString("name");
-                user.email = resultSet.getString("email");
-                user.password = resultSet.getString("password");
-                return user;
+				user.email = resultSet.getString("email");
+				user.password = resultSet.getString("password");
+				return user;
 			}
 		});
 	}
