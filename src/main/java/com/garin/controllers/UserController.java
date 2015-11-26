@@ -64,11 +64,7 @@ public class UserController {
 		model.addAttribute("movie", movieDao.getMovie());
 		return "users/movielist";
 	}
-	@RequestMapping(value="/loginok",method = RequestMethod.GET)
-	public String loginUser(@RequestParam Map<String,String> params, Model model) {
 
-		return "";
-	}
 ////////////////////////////////////////////
 	//예매 정보 받아옴
 	@RequestMapping("/reservelist")
