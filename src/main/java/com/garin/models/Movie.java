@@ -1,15 +1,29 @@
 package com.garin.models;
 
 public class Movie {
-    public int m_id;
-    public String m_title;
+    public int id;
+    public String title;
+    public String imgPath;
+    public int age;
+    public String describe;
 
-    public int getM_id(){
-        return m_id;
+    public int getId(){
+        return id;
     }
 
-    public String getM_title() {
-        return m_title;
+    public String getTitle() {
+        return title;
     }
 
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getDescribe() {
+        return describe;
+    }
 }

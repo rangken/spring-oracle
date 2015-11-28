@@ -39,10 +39,6 @@ public class UserController {
 		return "users/index";
 	}
 
-	@RequestMapping("/home")
-	public String mainhome(@RequestParam Map<String,String> params, Model model) {
-		return "users/home";
-	}
 
 	@RequestMapping("/reserve")
 	public String reserve(@RequestParam Map<String,String> params, Model model){
@@ -61,7 +57,7 @@ public class UserController {
 
 	@RequestMapping("/movielist")
 	public String movie(Model model) {
-		model.addAttribute("movie", movieDao.getMovie());
+		model.addAttribute("movie", movieDao.getMovies());
 		return "users/movielist";
 	}
 
@@ -79,11 +75,6 @@ public class UserController {
 		model.addAttribute("title", "예매 완료");
 		model.addAttribute("reserves", reserveDao.getReserves());
 		return "users/reservelist";
-	}
-
-	@RequestMapping("/movie1")
-	public String movie1(@RequestParam Map<String,String> params, Model model) {
-		return "users/movie1";
 	}
 }
 
