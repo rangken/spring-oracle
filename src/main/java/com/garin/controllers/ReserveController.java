@@ -55,7 +55,7 @@ public class ReserveController {
         String time = params.get("time");
         String theater = params.get("theater");
         reserveDao.createReserves(user.id, movie_id, date, time, theater);
-        model.addAttribute("title", "예매 완료");
+        model.addAttribute("title", "예매 목록");
         List<Reserve> reserves = reserveDao.getReserves(user.id);
         model.addAttribute("reserves", reserves);
         return "redirect:/reserves/list";

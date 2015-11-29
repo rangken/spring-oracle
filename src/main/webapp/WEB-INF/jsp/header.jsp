@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <header>
-    <img src="img/logo.png" width="250px" height="70px">
+    <img id="logo" src=".././img/logo.png" style="width: 250px;height: 70px; margin-left: auto; margin-right: auto; display: block;">
     <span id="name" style="float:right; margin-top: 0px;" >
         <c:if test="${user != null }">
             안녕하세요! ${user.name} 님

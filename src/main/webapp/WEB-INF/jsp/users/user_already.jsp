@@ -16,9 +16,9 @@
 <jsp:include page="../header.jsp" />
 <section id="content">
     <div class="box">
-        <table>
-            <p style="text-align: center; margin-top: 200px; font-size: 20px;"> 이미 존재하는 사용자입니다.</p>
-        </table>
+        <img src=".././img/cat.png" width="200px" height="100px" style="margin-left: 350px; margin-top: 100px;">
+            <p style="text-align: center; font-size: 20px;"> 이미 존재하는 사용자입니다.</p>
+
         <br>
     </div>
 </section>

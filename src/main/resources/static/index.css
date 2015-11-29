@@ -1,7 +1,7 @@
 header  {
 	background-color: #ffffff;
 	color: #E71A0F;
-	text-align: center;
+
 	font-size: 15px;
 	height: 50px;
 	font-weight: bold;
@@ -44,3 +44,11 @@ div.box{
 	margin-bottom: 20px;
 }
 
+
+img#logo{
+	align:center;
+	margin-left: auto;
+	margin-top:auto;
+	width:250px;
+	height: 70px;
+}

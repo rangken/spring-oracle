@@ -17,7 +17,7 @@
 
     <div class="box" style="overflow:scroll">
         <table  border="0" bordercolor="white" align="center">
-            <h2 align="center"> ${title} </h2>
+
             <c:forEach items="${reserves}" var="reserve">
             <br/>
             <tr>

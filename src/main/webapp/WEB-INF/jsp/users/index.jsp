@@ -15,7 +15,8 @@
 <jsp:include page="../header.jsp" />
 <section class="content">
 	<div class="box">
-	<h2 style="text-align:center; margin-top: 200px;">회원가입이 완료되었습니다!</h2>
+		<img src=".././img/cat.png" width="200px" height="100px" style="margin-left: 350px; margin-top: 100px;">
+	<h2 style="text-align:center; ">회원가입이 완료되었습니다!</h2>
 	</div>
 </section>
 <br>
