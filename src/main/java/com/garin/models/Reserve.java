@@ -1,24 +1,26 @@
 package com.garin.models;
 
+import java.util.Date;
+
 public class Reserve {
-	public String title;
-	public String date;
-	public String time;
+	public Integer movieId;
+	public Date movieDate;
 	public String theater;
+	public Movie movie;
 
-	public String getTitle() {
-		return title;
+	public Integer getMovieId() {
+		return movieId;
 	}
 
-	public String getDate() {
-		return date;
-	}
-
-	public String getTime() {
-		return time;
+	public Date getMovieDate() {
+		return movieDate;
 	}
 
 	public String getTheater() {
 		return theater;
+	}
+
+	public Movie getMovie() {
+		return movie;
 	}
 }

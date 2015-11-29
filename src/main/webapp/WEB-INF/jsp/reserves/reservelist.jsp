@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html lang="en">
 <head>
 	<style>
@@ -10,11 +11,14 @@
 <table>
     <h2> ${title} </h2>
 	<c:forEach items="${reserves}" var="reserve">
+	    <tr>
+	    <td colspan="4">예매 내역</td>
+	    </tr>
 		<tr>
-			<td><c:out value="${reserve.getTitle()}" /></td>
-			<td><c:out value="${reserve.getDate()}" /></td>
-			<td><c:out value="${reserve.getTime()}" /></td>
-			<td><c:out value="${reserve.getTheater()}" /></td>
+			<td><c:out value="${reserve.movieDate}" /></td>
+			<td><c:out value="${reserve.theater}" /></td>
+			<td><c:out value="${reserve.movie.title}" /></td>
+			<td><c:out value="${reserve.movie.imgPath}" /></td>
 		</tr>
 	</c:forEach>
 </table>

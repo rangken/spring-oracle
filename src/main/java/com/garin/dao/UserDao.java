@@ -33,6 +33,6 @@ public class UserDao {
     }
 
     public void createUser(String name, String password, String email) {
-        jdbcTemplate.update("INSERT INTO USERS (name, password, email) VALUES (?,?,?)", name, password, email);
+        jdbcTemplate.update("INSERT INTO USERS (ID, NAME, PASSWORD, EMAIL) VALUES (ID.NEXTVAL, ?,?,?)", name, password, email);
     }
 }

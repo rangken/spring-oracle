@@ -20,10 +20,10 @@ public class MovieDao {
             @Override
             public Movie mapRow(ResultSet resultSet, int i) throws SQLException {
                 Movie movie = new Movie();
-                movie.id = resultSet.getInt("id");
-                movie.title = resultSet.getString("title");
-                movie.imgPath = resultSet.getString("img_path");
-                movie.age = resultSet.getInt("age");
+                movie.id = resultSet.getInt("ID");
+                movie.title = resultSet.getString("TITLE");
+                movie.imgPath = resultSet.getString("IMG_PATH");
+                movie.age = resultSet.getInt("AGE");
                 return movie;
             }
         });
@@ -35,11 +35,11 @@ public class MovieDao {
             @Override
             public Movie mapRow(ResultSet resultSet, int i) throws SQLException {
                 Movie movie = new Movie();
-                movie.id = resultSet.getInt("id");
-                movie.title = resultSet.getString("title");
-                movie.imgPath = resultSet.getString("img_path");
-                movie.age = resultSet.getInt("age");
-                movie.describe = resultSet.getString("describe");
+                movie.id = resultSet.getInt("ID");
+                movie.title = resultSet.getString("TITLE");
+                movie.imgPath = resultSet.getString("IMG_PATH");
+                movie.age = resultSet.getInt("AGE");
+                movie.describe = resultSet.getString("DESCRIBE");
                 return movie;
             }
         });

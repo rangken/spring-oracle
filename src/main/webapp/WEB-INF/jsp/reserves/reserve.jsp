@@ -23,13 +23,13 @@
          <tr>
          <td bgcolor="#ececec">영화 선택</td>
             <td>
-            <input type="radio" name="movie" value="검은 사제들">
-             <img src="/img/visible_15.png">1. ${movie.title}
-            <input type="radio" name="movie" value="도리화가">
+            <input type="radio" name="movie_id" value="1">
+             <img src="/img/visible_15.png">1. 검은 사제들
+            <input type="radio" name="movie_id" value="2">
              <img src="/img/visible_12.png">2. 도리화가
-            <input type="radio" name="movie" value="내부자들">
+            <input type="radio" name="movie_id" value="3">
              <img src="/img/visible_18.png">3. 내부자들
-            <input type="radio" name="movie" value="헝거게임:더 파이널">
+            <input type="radio" name="movie_id" value="4">
              <img src="/img/visible_15.png">4. 헝거게임:더 파이널
             </td>
          </tr>
@@ -68,7 +68,6 @@
             <td colspan="2" bgcolor="#ececec" align="center">
             <input type="submit" id="ok_btn" name="완료" value="완료"></td>
          </tr>
-
          </table>
         </form>
     </section>
