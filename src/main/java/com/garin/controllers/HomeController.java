@@ -2,6 +2,7 @@ package com.garin.controllers;
 
 import com.garin.dao.MovieDao;
 import com.garin.models.Movie;
+import com.garin.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,9 +23,10 @@ public class HomeController {
 
 	@RequestMapping("")
 	public String mainhome(@RequestParam Map<String, String> params, Model model, HttpSession session) {
-        session.setAttribute("id", 1);
+		User user = (User) session.getAttribute("user");
 		List<Movie> movieList = movieDao.getMovies();
 		model.addAttribute("movies", movieList);
+		model.addAttribute("user", user);
 		return "home/home";
 	}
 }

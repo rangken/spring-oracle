@@ -17,7 +17,7 @@ public class ReserveDao {
     public JdbcTemplate jdbcTemplate;
 
     public List<Reserve> getReserves(int userId) {
-        String sql = "SELECT * FROM RESERVES R, MOVIE M WHERE R.MOVIE_ID = M.ID AND R.USER_ID = " + userId;
+        String sql = "SELECT * FROM RESERVES R, MOVIE M WHERE R.MOVIE_ID = M.ID AND R.USER_ID = " + userId + " ORDER BY R.ID DESC";
         return jdbcTemplate.query(sql, new RowMapper<Reserve>() {
             @Override
             public Reserve mapRow(ResultSet resultSet, int i) throws SQLException {

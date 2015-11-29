@@ -1,6 +1,8 @@
 package com.garin.controllers;
 
 import com.garin.dao.ReserveDao;
+import com.garin.models.Reserve;
+import com.garin.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -29,20 +32,21 @@ public class ReserveController {
 
     @RequestMapping("/list")
     public String reserves(Model model, HttpSession session) {
-        Integer userId = (Integer) session.getAttribute("id");
-        if (userId == null) {
+        User user = (User) session.getAttribute("user");
+        if (user == null) {
             // 로그인이 안되있음
             return "users/login";
         }
         model.addAttribute("title", "예매 완료");
-        model.addAttribute("reserves", reserveDao.getReserves(userId));
+        List<Reserve> reserves = reserveDao.getReserves(user.id);
+        model.addAttribute("reserves", reserves);
         return "reserves/reservelist";
     }
     //예매페이지 폼
     @RequestMapping(value="/createReserve", method = RequestMethod.POST)
     public String createReserve(@RequestParam Map<String,String> params, Model model, HttpSession session) {
-        Integer userId = (Integer) session.getAttribute("id");
-        if (userId == null) {
+        User user = (User) session.getAttribute("user");
+        if (user == null) {
             // 로그인이 안되있음
             return "users/login";
         }
@@ -50,9 +54,10 @@ public class ReserveController {
         String date = params.get("date");
         String time = params.get("time");
         String theater = params.get("theater");
-        reserveDao.createReserves(userId, movie_id, date, time, theater);
+        reserveDao.createReserves(user.id, movie_id, date, time, theater);
         model.addAttribute("title", "예매 완료");
-        model.addAttribute("reserves", reserveDao.getReserves(userId));
-        return "reserves/reservelist";
+        List<Reserve> reserves = reserveDao.getReserves(user.id);
+        model.addAttribute("reserves", reserves);
+        return "redirect:/reserves/list";
     }
 }

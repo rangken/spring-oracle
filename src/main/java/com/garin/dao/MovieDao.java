@@ -30,7 +30,7 @@ public class MovieDao {
     }
 
     public Movie getMovie(Integer id) {
-        String query = "SELECT * FROM MOVIE WHERE \"id\"=" + id;
+        String query = "SELECT * FROM MOVIE WHERE ID=" + id;
         return jdbcTemplate.queryForObject(query, new RowMapper<Movie>() {
             @Override
             public Movie mapRow(ResultSet resultSet, int i) throws SQLException {

@@ -1,6 +1,6 @@
 header  {
 	background-color: #ffffff;
-	color: #5064FA;
+	color: #E71A0F;
 	text-align: center;
 	font-size: 15px;
 	height: 50px;
@@ -27,7 +27,7 @@ nav ul li{
 
 a{
 	text-decoration: none;
-	color: #5064FA;
+	color: #E71A0F;
 	font-size: 20px;
 }
 section.content {

@@ -7,6 +7,7 @@ public class User {
 	public String email;
 	public String password;
 	public List<Reserve> reserves;
+	public int id;
 
 	public String getName() {
 		return name;
