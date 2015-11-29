@@ -18,7 +18,6 @@ public class UserController {
 	@Autowired
 	UserDao userDao;
 	MovieDao movieDao;
-	ReserveDao reserveDao;
 
 	@RequestMapping("/list")
 	public String users(Model model) {
@@ -39,42 +38,12 @@ public class UserController {
 		return "users/index";
 	}
 
-
-	@RequestMapping("/reserve")
-	public String reserve(@RequestParam Map<String,String> params, Model model){
-		return "users/reserve";
-	}
-
-	@RequestMapping("/movieselect")
-	public String movieselect(@RequestParam Map<String,String> params, Model model) {
-		return "users/movieselect";
-	}
-
 	@RequestMapping("/login")
 	public String login(@RequestParam Map<String,String> params, Model model) {
 		return "users/login";
 	}
 
-	@RequestMapping("/movielist")
-	public String movie(Model model) {
-		model.addAttribute("movie", movieDao.getMovies());
-		return "users/movielist";
-	}
 
-////////////////////////////////////////////
-	//예매 정보 받아옴
-	@RequestMapping("/reservelist")
-	public String reserves(Model model) {
-		model.addAttribute("reserves",reserveDao.getReserves());
-		return "";
-	}
-	//예매페이지 폼
-	@RequestMapping(value="/createReserve", method = RequestMethod.POST)
-	public String createReserve(@RequestParam Map<String,String> params, Model model) {
-		reserveDao.createReserves(params.get("title"), params.get("date"), params.get("time"),params.get("theater"));
-		model.addAttribute("title", "예매 완료");
-		model.addAttribute("reserves", reserveDao.getReserves());
-		return "users/reservelist";
-	}
+
 }
 

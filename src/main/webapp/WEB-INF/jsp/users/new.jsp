@@ -12,18 +12,7 @@
             	</style>
     </head>
     <body>
-    <header>
-    		<h1>CATHOLIC CINEMA</h1>
-    	</header>
-    	<nav class="nav-bar">
-    		<ul>
-    			<li><a href="/users/home">HOME</a></li>
-    			<li><a href="/users/reserve">예매</a></li>
-    			<li><a href="/users/movielist">영화</a></li>
-    			<li><a href="/users/login">로그인</a></li>
-    			<li><a href="/users/new">회원가입</a></li>
-    		</ul>
-    	</nav>
+        <jsp:include page="../header.jsp" />
     	<section class="content">
         <p><b>SIGN UP</b></p>
         <form action="/users/create" method="POST" >

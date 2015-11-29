@@ -12,23 +12,10 @@
             	</style>
         <title>Reserve Page</title>
     </head>
-    <body>
-    <header>
-    		<h1>CATHOLIC CINEMA</h1>
-    	</header>
-    	<nav class="nav-bar">
-    		<ul>
-    			<li><a href="/users/home">HOME</a></li>
-    			<li><a href="/users/reserve">예매</a></li>
-    			<li><a href="/users/movielist">영화</a></li>
-    			<li><a href="/users/login">로그인</a></li>
-    			<li><a href="/users/new">회원가입</a></li>
-    		</ul>
-    	</nav>
-    	
+        <jsp:include page="../header.jsp" />
     	<section class="content">
         <p><b>예매 페이지</b></p>
-        <form action="/users/createReserve" method="POST" >
+        <form action="/reserves/createReserve" method="POST" >
          <table align="center" border="1" bordercolor="white" cellspacing="0" cellpadding="2">
          <tr>
          <td colspan="2" align="center" bgcolor="#ececec">예매 정보 선택</td>
@@ -37,7 +24,7 @@
          <td bgcolor="#ececec">영화 선택</td>
             <td>
             <input type="radio" name="movie" value="검은 사제들">
-             <img src="/img/visible_15.png">1. 검은 사제들
+             <img src="/img/visible_15.png">1. ${movie.title}
             <input type="radio" name="movie" value="도리화가">
              <img src="/img/visible_12.png">2. 도리화가
             <input type="radio" name="movie" value="내부자들">

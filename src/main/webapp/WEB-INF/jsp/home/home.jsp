@@ -27,20 +27,6 @@
                             <a href="/movies/${movie.id}"><img src="${pageContext.request.contextPath}/${movie.imgPath}", height="250", style="border:1; border-radius:30px;"></a>
                             <br>${movie.id}. <img src="/img/visible_${movie.age}.png">${movie.title}
                         </td>
-                        <%--
-                        <td width="225", height="400" align="center">
-                            <img src="/img/dori1.jpg", height="250", style="border:1; border-radius:30px;">
-                            <br>2.<img src="/img/visible_12.png">도리화가
-                        </td>
-                        <td width="225", height="400" align="center">
-                            <img src="/img/movie33.jpg", height="250", style="border:1; border-radius:30px;">
-                            <br>3.<img src="/img/visible_18.png">내부자들
-                        </td>
-                        <td width="225", height="400" align="center">
-                            <img src="/img/movie4.jpg", height="250", style="border:1; border-radius:30px;">
-                            <br>4.<img src="/img/visible_15.png">헝거게임:더 파이널
-                        </td>
-                        --%>
 					</c:forEach>
 				</tr>
 			</table>

@@ -30,11 +30,8 @@ public class ReserveDao {
         });
     }
 
-    public void createReserveTable() {
-        jdbcTemplate.execute("CREATE TABLE SYSTEM.RESERVES (title VARCHAR(30), date VARCHAR2(30), time VARCHAR2(30),theater VARCHAR2(30)");
-    }
-
     public void createReserves(String title, String date, String time,String theater) {
-        jdbcTemplate.update("INSERT INTO RESERVES (title, date, time,theater) VALUES (?,?,?,?)", title, date, time, theater);
+        String query = String.format("INSERT INTO RESERVES (title, date, time,theater) VALUES (%s,%s,%s,%s)", title, date, time, theater);
+        jdbcTemplate.update(query);
     }
 }

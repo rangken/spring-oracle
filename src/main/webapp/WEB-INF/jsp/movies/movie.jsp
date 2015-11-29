@@ -19,7 +19,7 @@
             <div class="box">
             <div class="wrapper">
             <table id="movieText">
-            <p align="center"><b>검은 사제들</b></p>
+            <p align="center"><b>${movie.title}</b></p>
             <tr>
                 <td><img src="${pageContext.request.contextPath}/${movie.imgPath}", height="350", style="border:1; border-radius:30px;"></td>
                 <td>

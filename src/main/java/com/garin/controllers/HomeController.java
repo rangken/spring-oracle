@@ -17,14 +17,10 @@ import java.util.Map;
 @Controller
 @RequestMapping("/home")
 public class HomeController {
-	@Autowired
-	UserDao userDao;
 
 	@Autowired
 	MovieDao movieDao;
 
-	@Autowired
-	ReserveDao reserveDao;
 
 	@RequestMapping("")
 	public String mainhome(@RequestParam Map<String,String> params, Model model) {
