@@ -17,3 +17,6 @@ spring.datasource.driverClassName=oracle.jdbc.driver.OracleDriver
 
 spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
+
+
+sqlplus SYS/oracle@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=52.34.31.75)(Port=1521))(CONNECT_DATA=(SID=XE))) as SYSDBA
