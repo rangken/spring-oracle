@@ -19,6 +19,8 @@ import java.util.Map;
 public class UserController {
 	@Autowired
 	UserDao userDao;
+
+	@Autowired
 	MovieDao movieDao;
 
 	@RequestMapping("/list")

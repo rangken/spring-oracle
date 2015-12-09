@@ -6,3 +6,14 @@
 
 3. sqlplus system/oracle@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=52.34.31.74)(Port=1521))(CONNECT_DATA=(SID=XE)))
 4. java -jar -Dspring.profiles.active=production 
+
+
+server.port=8081
+
+spring.datasource.url=jdbc:oracle:thin:@52.34.31.74:1521:XE
+spring.datasource.username=system
+spring.datasource.password=oracle
+spring.datasource.driverClassName=oracle.jdbc.driver.OracleDriver
+
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
